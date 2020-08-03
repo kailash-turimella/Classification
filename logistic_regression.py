@@ -22,8 +22,10 @@ import pandas as pd
 
 # Importing datasets
 dataset = pd.read_csv('Social_Network_Ads.csv')
-X = dataset.iloc[:,[2,3]].values     # Independent         # All rows of all columns except the last one
-y = dataset.iloc[:,4].values         # Dependent           # All rows of the third column
+X = dataset.iloc[:,[2,3]].values     # Independent
+y = dataset.iloc[:,4].values         # Dependent
+
+
 
 # Splitting the data set into training set and test set
 from sklearn.model_selection import train_test_split 
@@ -31,20 +33,22 @@ X_train,X_test,y_train,y_test = train_test_split(X,y, test_size = 0.25,random_st
 
 
 # Feature scaling
-#        bringing the age and salary to a specific range
 from sklearn.preprocessing import StandardScaler
 sc_X = StandardScaler()
 sc_y = StandardScaler()
 X_train = sc_X.fit_transform(X_train)
 X_test = sc_X.transform(X_test)          # Already fitted
 
+
 # Fitting logistic regression to training set
 from sklearn.linear_model import LogisticRegression
 classifier = LogisticRegression()
 classifier.fit(X_train,y_train)          # classifier learns the relation between X_train and y_train
 
+
 # Predicting test set results
 y_pred = classifier.predict(X_test)
+
 
 # Making the confusion matrix
 from sklearn.metrics import confusion_matrix
