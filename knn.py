@@ -3,7 +3,7 @@ K-Nearest Neighbors
 
 Choose a value of k,for example 5 (n_neighbours)
 The program finds the 5 closest points to the new data point
-Among the five whichever category has the most points is the category assigned to the new data point
+Among the 5 whichever category has the most points is the category assigned to the new data point
 
 There are different ways to calculate the nearest points, like the Euclidean distance
 """
