@@ -2,7 +2,7 @@
 Kernel SVM
 
 Kernal SVM is used when the data is not linearly separable
-  like when the green points are surrounded by the red points
+  for example, when the green points are surrounded by the red points
 Kernal SVM add a dimension to the dataset so that it becomes linearly separable
 f = (x-5)^2
 """
