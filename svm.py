@@ -11,13 +11,11 @@ SVM is different from most other methods because it predicts based on the extrem
 For example, if your trying to classify apples and oranges,
    most of the algorithms learn from the apples which look a lot like apples
    but instead, svm learns based on the apple that looks like an orange, or the worst apple.
-
 """
 # Importing libraries
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
-
 
 # Importing datasets
 dataset = pd.read_csv('Social_Network_Ads.csv')
