@@ -4,8 +4,8 @@ Bayes Theorum:
     P(A|B) = P(B|A) X P(A)
              -------------
                   P(B)
-                  
-
+               
+P(A|B) = Probability of A if B is true
 '''
 
 # Classification Template
@@ -23,7 +23,7 @@ y = dataset.iloc[:,4].values         # Dependent           # All rows of the thi
 
 # Splitting the data set into training set and test set
 from sklearn.model_selection import train_test_split 
-X_train,X_test,y_train,y_test = train_test_split(X,y, test_size = 0.25,random_state = 0) # test size = 20% 
+X_train,X_test,y_train,y_test = train_test_split(X,y, test_size = 0.25,random_state = 0) # test size = 25% 
 
 
 # Feature scaling
