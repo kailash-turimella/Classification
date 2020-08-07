@@ -8,8 +8,6 @@ Bayes Theorum:
 P(A|B) = Probability of A if B is true
 '''
 
-# Classification Template
-
 # Importing libraries
 import numpy as np
 import matplotlib.pyplot as plt
@@ -27,7 +25,6 @@ X_train,X_test,y_train,y_test = train_test_split(X,y, test_size = 0.25,random_st
 
 
 # Feature scaling
-#        bringing the age and salary to a specific range
 from sklearn.preprocessing import StandardScaler
 sc_X = StandardScaler()
 sc_y = StandardScaler()
