@@ -9,7 +9,6 @@ Build a decision tree of those points(instead of building a decision tree of all
 Choose the number of trees you want(n_estimators) and repeat steps 1&2.
 You will have multiple decision trees
 For a new point, which ever category most of the decision trees predict(majority vote) is assigned
-
 """
 # Importing libraries
 import numpy as np
@@ -24,11 +23,10 @@ y = dataset.iloc[:,4].values         # Dependent           # All rows of the thi
 
 # Splitting the data set into training set and test set
 from sklearn.model_selection import train_test_split 
-X_train,X_test,y_train,y_test = train_test_split(X,y, test_size = 0.25,random_state = 0) # test size = 20% 
+X_train,X_test,y_train,y_test = train_test_split(X,y, test_size = 0.25,random_state = 0) # test size = 25% 
 
 
 # Feature scaling
-#        bringing the age and salary to a specific range
 from sklearn.preprocessing import StandardScaler
 sc_X = StandardScaler()
 sc_y = StandardScaler()
